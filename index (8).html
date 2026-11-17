@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>СМЕТ•А ПРО — сметные расчёты любой сложности</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Segoe UI', Arial, sans-serif;
+    color:#2b2b2b;
+    background:#1c1f24 url('hero-bg.jpg') center/cover fixed no-repeat;
+  }
+  .page { position:relative; max-width:1100px; margin:0 auto; background:rgba(248,247,244,.97); box-shadow:0 0 40px rgba(0,0,0,.45); }
+  .side { position:fixed; top:0; bottom:0; width:170px; opacity:.28; z-index:0;
+          -webkit-mask-image:linear-gradient(to bottom,transparent,#000 15%,#000 85%,transparent);
+          mask-image:linear-gradient(to bottom,transparent,#000 15%,#000 85%,transparent); }
+  .side.left { left:0; -webkit-mask-image:linear-gradient(to left,transparent 40%,#000); mask-image:linear-gradient(to left,transparent 40%,#000); }
+  .side.right { right:0; -webkit-mask-image:linear-gradient(to right,transparent 40%,#000); mask-image:linear-gradient(to right,transparent 40%,#000); }
+  @media(max-width:1250px){ .side{display:none;} }
+
+  header {
+    position:relative; color:#fff; padding:90px 30px 70px; text-align:center;
+    background:linear-gradient(rgba(15,20,28,.72),rgba(15,20,28,.72)), url('hero-bg.jpg') center/cover;
+  }
+  .logo { font-size:52px; font-weight:800; letter-spacing:4px; }
+  .logo span { color:#e8a33d; }
+  .tagline { margin-top:14px; font-size:20px; opacity:.92; }
+  .header-btns { margin-top:30px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+  .btn { display:inline-block; padding:13px 28px; border-radius:8px; text-decoration:none; font-weight:600; color:#fff; font-size:16px; }
+  .btn.tg { background:#2AABEE; } .btn.wa { background:#25D366; } .btn.call { background:#e8a33d; }
+
+  main { position:relative; z-index:1; padding:50px 40px 40px; }
+  section { margin-bottom:60px; }
+  h2 { font-size:30px; margin-bottom:22px; color:#1c1f24; border-left:5px solid #e8a33d; padding-left:14px; }
+  p.lead { font-size:18px; line-height:1.65; max-width:800px; }
+
+  .trust { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
+  .trust div { background:#fff; border:1px solid #e5e1d8; border-radius:10px; padding:22px; }
+  .trust b { display:block; font-size:26px; color:#c07b1d; margin-bottom:6px; }
+  .trust small { color:#555; font-size:14px; line-height:1.5; display:block; }
+
+  table { width:100%; border-collapse:collapse; background:#fff; }
+  th, td { padding:13px 16px; border-bottom:1px solid #ece8df; text-align:left; }
+  th { background:#1c1f24; color:#fff; font-weight:600; }
+  td.price { font-weight:700; color:#c07b1d; white-space:nowrap; }
+  .note { margin-top:12px; font-size:14px; color:#666; }
+
+  .cases { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:22px; }
+  .cases img { width:100%; border-radius:10px; border:1px solid #ddd6c8; box-shadow:0 4px 14px rgba(0,0,0,.12); transition:transform .25s, box-shadow .25s; display:block; }
+  .cases img:hover { transform:translateY(-4px); box-shadow:0 10px 24px rgba(0,0,0,.2); }
+
+  .steps { counter-reset:s; max-width:760px; }
+  .steps div { counter-increment:s; padding:14px 0 14px 52px; position:relative; border-bottom:1px dashed #d9d2c2; }
+  .steps div:before { content:counter(s); position:absolute; left:0; top:12px; width:34px; height:34px; border-radius:50%;
+                      background:#e8a33d; color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; }
+
+  footer { background:#14171c; color:#cfcabf; text-align:center; padding:40px 20px; position:relative; z-index:1; }
+  footer b { color:#fff; font-size:22px; display:block; margin-bottom:10px; }
+  footer .ct { margin-top:8px; line-height:1.8; }
+  footer a { color:#e8a33d; text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="side left"><img src="side-left.jpg" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+<div class="side right"><img src="side-right.jpg" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+
+<div class="page">
+<header>
+  <div class="logo">СМЕТ<span>•</span>А ПРО</div>
+  <div class="tagline">Сметные расчёты любой сложности — от комнаты до резервуарного парка</div>
+  <div class="header-btns">
+    <a class="btn tg" href="https://t.me/Shustry161">Telegram: @Shustry161</a>
+    <a class="btn wa" href="https://wa.me/79081883733">WhatsApp / Макс</a>
+    <a class="btn call" href="tel:+79934552805">+7 (993) 455-28-05</a>
+  </div>
+</header>
+
+<main>
+<section id="about">
+  <h2>Почему нам доверяют</h2>
+  <div class="trust">
+    <div><b>10+ лет</b><small>опыта в расчётах: сметы, объёмы, норм расхода материалов</small></div>
+    <div><b>Все отрасли</b><small>работаем с любыми направлениями строительства — от отделки и электромонтажа до промышленных резервуаров и инженерных сетей: методика расчёта везде своя, и мы её знаем</small></div>
+    <div><b>0 ₽</b><small>экспресс-оценка до начала работы — присылайте документацию, назовём порядок цен бесплатно</small></div>
+    <div><b>100%</b><small>прозрачность: вы видите каждую строку сметы, объём и расценку — без «черных ящиков»</small></div>
+  </div>
+</section>
+
+<section id="price">
+  <h2>Прайс</h2>
+  <table>
+    <tr><th>Услуга</th><th>Стоимость</th></tr>
+    <tr><td>Смета объекта до 100 м²</td><td class="price">от 2 500 ₽</td></tr>
+    <tr><td>Смета крупного объекта</td><td class="price">от 5 000 ₽</td></tr>
+    <tr><td>Проверка чужой сметы</td><td class="price">от 1 000 ₽</td></tr>
+    <tr><td>Пересчёт материалов по нормам расхода</td><td class="price">от 2 000 ₽</td></tr>
+    <tr><td>График производства работ</td><td class="price">от 3 000 ₽</td></tr>
+    <tr><td>Подбор рыночных расценок</td><td class="price">от 2 000 ₽</td></tr>
+  </table>
+  <p class="note">Цена фиксируется после просмотра документации. «Смета до 100 м²» — способ проверить нас в деле.</p>
+</section>
+
+<section id="cases">
+  <h2>Примеры работ</h2>
+  <div class="cases">
+    <img src="case-estimate-elec.jpg" alt="Смета электромонтажных работ">
+    <img src="case-estimate-ceil.jpg" alt="Смета отделочных работ">
+    <img src="case-layout.jpg" alt="Планы и экспликации помещений">
+    <img src="case-plans.jpg" alt="Монтажные планы с узлами">
+    <img src="case-title.jpg" alt="Титульный лист рабочей документации">
+  </div>
+</section>
+
+<section id="how">
+  <h2>Как мы работаем</h2>
+  <div class="steps">
+    <div>Вы присылаете чертежи, ведомости или фото объекта — в Telegram или WhatsApp</div>
+    <div>Мы бесплатно оцениваем объём работ и называем цену сметы</div>
+    <div>Готовим расчёт: объёмы по нормам, расценки, накладные расходы</div>
+    <div>Вы получаете смету в удобном формате и вносите правки — столько раз, сколько нужно</div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <b>Готовы посчитать ваш объект?</b>
+  <div class="ct">
+    Telegram: <a href="https://t.me/Shustry161">@Shustry161</a><br>
+    WhatsApp / Макс: <a href="https://wa.me/79081883733">+7 (908) 188-37-33</a><br>
+    Телефон: <a href="tel:+79934552805">+7 (993) 455-28-05</a>
+  </div>
+</footer>
+</div>
+</body>
+</html>
